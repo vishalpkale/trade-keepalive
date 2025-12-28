@@ -2,7 +2,7 @@ name: Trade Keep Alive
 
 on:
   schedule:
-    - cron: "* * * * *"
+    - cron: "*/5 * * * *"
   workflow_dispatch:
 
 jobs:
