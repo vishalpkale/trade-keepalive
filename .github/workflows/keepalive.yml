@@ -1,0 +1,14 @@
+name: Trade Keep Alive
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Render Bot
+        run: |
+          curl -s -o /dev/null -w "%{http_code}" https://trade-ndpp.onrender.com/
